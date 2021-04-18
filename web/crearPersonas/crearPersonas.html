@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.serializejson.js"></script>
+<script type="text/javascript" src="crearPersonas.js"></script>
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="title" style="text-align:center">
+      <h2>FORM</h2>
+      <p>ingrese los datos solicitados</p>
+    </div>
+    <div class="row">
+      <div class="column">
+        <form class="form" action="http://localhost:3000/api" method="POST" id="crearPersonasForm">
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" name="nombre" placeholder="ingrese su nombre...">
+          <label for="lname">Apellido</label>
+          <input type="text" id="lname" name="apellido" placeholder="ingrese su apellido...">
+      <label for="fname">DNI</label>
+          <input type="text" id="fname" name="dni" placeholder="ingrese su DNI...">
+          <div class="submit-bttn">
+              <input type="submit" value="enviar">
+          </div>
+        </form>
+        <div class="result">
+            <p class="result-p">  </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
