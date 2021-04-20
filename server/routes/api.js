@@ -15,13 +15,11 @@ const loginValidation = { //realiza la validacion
 
 module.exports = function(app){
     app.get(`${API_BASE}/`, (req, res) => {
-        result = axios.get('https://apitest-4a395-default-rtdb.firebaseio.com/personas.json', {
+        axios.get('https://apitest-4a395-default-rtdb.firebaseio.com/personas.json', {
           params: {}
-        }).then((res) => {
-          console.log("result del get" + JSON.stringify(res.data));
-          // res.send( JSON.stringify(res.data) );
+        }).then((result) => {
+          res.send( JSON.stringify(result.data) );
         })
-        res.send('API GET. para hacer un POST, utilice la direccion http://localhost:3000/api');
     })
 
     // ruta del metodo POST
