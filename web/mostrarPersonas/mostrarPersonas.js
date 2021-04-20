@@ -37,4 +37,9 @@ $('document').ready(function(){
             row.appendChild(dniCell);
         }) 
     });
+
+    document.getElementById("submit-bttn").onclick = function () {
+        location.href = "../crearPersonas/crearPersonas.html";
+    };
 });
+
